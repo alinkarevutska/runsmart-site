@@ -1,0 +1,87 @@
+.header {
+    background: url(../img/bg/header_bg.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    &__top {
+        padding-top: 10px;
+    }
+    &__promo {
+        padding-left: 40px;
+    }
+    &__rep_big, &__call {
+        font-weight: 700;
+        font-size: 20px;
+    }
+    &__call {
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+    &__title {
+        @include titleStyle;
+        margin-top: 90px;
+    }
+    &__subtitle {
+        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 20px;
+        letter-spacing: 5px;
+    }
+    &__info {
+        padding-top: 60px;
+    }
+    &__info__descr {
+        font-size: 15px;
+        text-align: center;
+        padding-top: 15px;
+    }
+    &__info__img {
+        display: block;
+        margin: 0 auto;
+    }
+    &__catalog {
+        padding: 65px 0 90px 0px;
+        font-size: 15px;
+    }
+    &__catalog__go {
+        padding-top: 20px;
+    }
+    &__catalog__link {
+        text-transform: uppercase;
+        &:hover {
+            color: white;
+            text-decoration: underline;
+        }
+    }
+    label {
+        color: black;
+    }
+    a:active {
+        color: $color-red;
+    }
+}
+.btn-danger {
+    background: $color-red;
+}
+
+@media (min-width: 320px) and (max-width: 575px) {
+    .header__title, .header__subtitle {
+        font-size: 2em;
+        text-align: center;
+    }
+    .header__catalog {
+        padding: 30px 0 50px 0px;
+    }
+}
+@media (min-width: 430px) and (max-width: 575px) {
+    .header__call {
+        margin-right: 30px;
+    }
+}
+@media (min-width: 1400px) {
+    .btn-lg, .header__call {
+        font-size: 1rem;
+    }
+}

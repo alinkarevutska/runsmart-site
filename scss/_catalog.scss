@@ -1,0 +1,182 @@
+.catalog {
+    padding-bottom: 100px;
+    &__tabs {
+        margin-top: 70px;
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 0;
+        padding-left: 0;
+        padding-bottom: 60px;
+    }
+    &__tab {
+      width: 220px;  
+      height: 50px;
+      border: 2px solid $color-grey;
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 18px;
+      color: $color-grey;
+      text-align: center;
+      line-height: 48px;
+      transform: skewX(-25deg);
+      margin: 0 5px;
+      cursor: pointer;
+      transition: .5s ease all;
+      &:hover {
+          box-shadow: 3px 3px 20px $color-main-red;
+          border: none;
+      }
+      div {
+          transform: skewX(25deg);
+      }
+      &_active {
+          color: #fff;
+          background: $color-red;
+          border: none;
+      }
+    }
+    &__content {
+        flex-wrap: wrap;
+        display: none;
+        &_active {
+            display: flex;
+        }
+    }
+    &-item {
+        width: 100%;  
+        max-width: 300px;
+        min-height: 440px;
+        border: 2px solid #e8e8e8;
+        padding: 20px;
+        margin: 10px 15px;
+        text-align: center;
+        overflow: hidden;
+        &__img {
+            max-width: 100%;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+        }
+        &__subtitle {
+           font-weight: 700;
+           font-size: 15px; 
+           margin-top: 20px;
+        }
+        &__descr {
+            margin-top: 16px;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        &__link, &__back {
+            text-transform: uppercase;
+            color: $color-main-red;
+            font-weight: 500;
+            font-size: 16px;
+            &:hover {
+                text-decoration: underline;
+                color: black;
+                cursor: pointer;
+            }
+        }
+        &__back {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(calc(-50% - 20px));
+        }
+        &__footer {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 20px;
+        }
+        &__price {
+            font-weight: 700;
+            font-size: 20px;
+        }
+        &__price_old {
+            font-weight: 400;
+            text-decoration: line-through;
+            color: $color-dark-grey;
+        }
+        &__btn {
+            width: 130px;
+        }
+        &__wrapper {
+            display: flex;
+            width: calc(200% + 40px);
+        }
+        &__content {
+            width: 50%;
+            margin-right: 0;
+            transform: translateX(-100%);
+            transition: .5s ease all;
+            &_active {
+                transform: translateX(0%);
+                margin-right: 20px;
+            }
+        }
+        &__details {
+            width: 50%;
+            margin-left: 20px;
+            transform: translateX(0%);
+            padding-right: 20px;
+            transition: .5s ease all;
+            margin-bottom: 0;
+            list-style-type: none;
+            text-align: left;
+            position: relative;
+            &_active {
+                transform: translateX(-100%);
+                margin-left: 0;
+            }
+            li {
+                color: $color-dark-grey;
+                font-size: 14px;
+                margin-bottom: 20px;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 7px;
+                    height: 7px;
+                    background-color: $color-main-red;
+                    left: -15px;
+                    top: 15px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .catalog__tab {
+        font-size: 13px;
+        line-height: 25px;
+        margin: 0 1px;
+        padding: 0 5px;
+    }
+    .catalog__title {
+        margin: 60px 0 50px 0; 
+    }
+    .catalog__tabs {
+        margin-top: 60px;
+    }
+}
+@media (min-width: 321px) and (max-width: 565px) {
+    .catalog__title {
+        margin: 60px 0 50px 0; 
+    }
+    .catalog__tabs {
+        margin-top: 60px;
+    }
+    .catalog__tab {
+        font-size: 13px;
+        line-height: 50px;
+        margin: 0 1px;
+    }
+}
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .catalog-item {
+        margin: 10px 5px;
+    }
+}

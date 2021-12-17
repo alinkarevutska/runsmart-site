@@ -1,0 +1,12 @@
+.pageup__link {
+    display: none;
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    height: 100px;
+    width: 50px;
+    svg {
+        width: 100%;
+        fill: $color-main-red;
+    }
+}

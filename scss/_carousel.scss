@@ -1,0 +1,47 @@
+.carousel {
+    padding: 80px 0;
+    &.container {
+        position: relative;
+        margin: 0 auto;
+    }
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        background: transparent;
+    }
+    .prev {
+        left: 15vw;
+    }
+    .next {
+        right: 15vw;
+    }
+    .tns-item {
+        img {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 700px;
+        }
+    }
+}
+@media (min-width: 320px) and (max-width: 1399px) {
+    .carousel .prev {
+        left: 5vw;
+    }
+    .carousel .next {
+        right: 5vw;
+    }
+    .carousel {
+        padding: 60px 0;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .carousel .prev {
+        left: 10vw;
+    }
+    .carousel .next {
+        right: 10vw;
+    }
+}

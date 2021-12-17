@@ -1,0 +1,57 @@
+.footer {
+    position: relative;
+    &__info {
+        width: 460px;
+        background: $color-red;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        position: absolute;
+        right: 50%;
+        transform: translateX(calc(100% - 230px));
+    }
+    &__tel:hover {
+        color: white;
+        text-decoration: underline;
+    }
+    &__adress {
+        padding: 45px 0 35px 0;
+    }
+    &__icon {
+        fill: white;
+        stroke: white;
+        width: 40px;
+        height: 40px;
+        margin: 35px 0 45px 0;
+        &:hover {
+            transform: scale(1.1);
+            fill: $color-red;
+            stroke: white;
+            cursor: pointer;
+        }
+        &:active {
+            fill: $color-main-red;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .footer__info {
+        width: 100%;
+        max-width: 90vw;
+        transform: translateX(calc(100% - 45vw));
+    }
+    .footer__adress {
+        padding: 45px 10px 35px 10px;
+    }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+    .footer__info {
+        width: 70vw;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .footer__info {
+        width: 55vw;
+    }
+}

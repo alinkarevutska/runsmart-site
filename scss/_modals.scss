@@ -1,0 +1,25 @@
+.modal {
+    .modal-title, .modal-subtitle, .modal-description {
+        color: black;
+        font-weight: 700;
+        font-size: 19px;
+    }
+    .modal-subtitle {
+        font-size: 15px;
+    }
+    .modal-body, .modal-header {
+        background: #f2f2f2;
+    }
+    .modal-header {
+        text-align: center;
+    }
+    .orderModal-header {
+        text-align: left;
+    }
+    .error {
+        border: 1px solid red;
+    }
+    label.error {
+        border: none;
+    }
+}

@@ -1,0 +1,23 @@
+.benefits {
+    background-color: #f6f6f6;
+    &__title {
+        padding: 70px 0 75px 0;
+    }
+    &__block {
+        padding-bottom: 80px;
+    }
+    &__img {
+        width: 100%;
+        max-width: 60px;
+        margin: 0 auto;
+    }
+    &__subtitle {
+       font-size: 18px; 
+       font-weight: 700;
+       margin-top: 25px;
+       margin-bottom: 15px;
+    }
+    &__descr {
+        font-size: 14px;
+    }
+}
